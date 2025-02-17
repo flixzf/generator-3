@@ -3,10 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]  # main 브랜치에 push할 때마다 실행
+  # 수동 실행 옵션 추가
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:  # 권한 명시적 설정
+      contents: write
     
     steps:
     - uses: actions/checkout@v2
