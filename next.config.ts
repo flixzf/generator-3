@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: process.env.BUILD_TYPE === 'github' ? true : false,
   },
-  basePath: process.env.BUILD_TYPE === 'github' ? '/generator-main-next-2' : '',  // 레포지토리 이름으로 수정
+  basePath: process.env.BUILD_TYPE === 'github' ? '/generator-3' : '',  // 저장소 이름으로 수정
 };
 
 export default nextConfig;
