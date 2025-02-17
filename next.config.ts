@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: process.env.BUILD_TYPE === 'github' ? 'export' : undefined,
+  output: 'export',
   images: {
-    unoptimized: process.env.BUILD_TYPE === 'github' ? true : false,
+    unoptimized: true,
   },
-  basePath: process.env.BUILD_TYPE === 'github' ? '/generator-3' : '',  // 저장소 이름으로 수정
-  assetPrefix: process.env.BUILD_TYPE === 'github' ? '/generator-3' : '',  // 이 줄 추가
+  basePath: '/generator-3',
+  assetPrefix: '/generator-3/',
 };
 
 export default nextConfig;
